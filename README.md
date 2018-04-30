@@ -85,10 +85,15 @@ All group names must be kebab-case.
 #### Location
 All files containing group variables must to be located in sub-directories in `group_vars`. Plaintext variables must
 be defined in a file called `vars.yml` and secret variables are to be placed in an
-[Ansible Vault](http://docs.ansible.com/ansible/latest/user_guide/vault.html) named `vault`.
+[Ansible Vault](http://docs.ansible.com/ansible/latest/user_guide/vault.html) named `vault`. To aid searchability, all
+variables defined in Ansible vaults must be referenced in the header of the associated `vars.yml` file, in the format:
+```
+# Value contains:
+#   example_GROUP_variable
+```
 
 
-## Tasks
+### Tasks
 Tasks should always have a descriptive name. The first word should not be capitalised by default but capital letters may
 be used for proper nouns and acronyms. The name does not need to be prefixed with the role name and should not be
 constructed programmatically.
