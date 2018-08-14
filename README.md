@@ -44,7 +44,7 @@ all values used to configure the role are binded to role parameters via the asso
 ```
 A role must not "reach out" and use variables that happen to be in scope, as this can both couple roles to specific
 setups, and it can to make it difficult to know where a value used in a role has been defined. Roles must therefore only
-use variables mentioned in `default` or `vars` files ()with the exception of the use of built-ins).
+use variables mentioned in `default` or `vars` files (with the exception of the use of built-ins).
 
 ##### Handlers
 By default, handlers are executed at the end of a play. This is problematic if a failure occurs, as the triggering
